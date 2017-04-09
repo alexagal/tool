@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="component" version="1.5.0">
+ <name>Tool</name>
+ <creationDate>2017-04-08</creationDate>
+ <author>Alex Agal</author>
+ <authorEmail>agal.282@gmail.com</authorEmail>
+ <authorUrl></authorUrl>
+ <copyright>Copyright Info</copyright>
+ <license>License Info</license>
+ <version>1.00</version>
+ <description>Вспомог. инструменты для сайтов</description>
+ 
+ <files folder="site">
+  <filename>controller.php</filename>
+  <filename>index.html</filename>
+  <filename>tool.php</filename>
+  <folder>controllers</folder>
+  <folder>models</folder>  
+  <folder>views</folder>
+ </files>
+
+ <install>
+  <sql>
+    <file charset="utf8" driver="mysql">install.sql</file>
+  </sql>
+ </install>
+ <uninstall>
+  <sql>
+    <file charset="utf8" driver="mysql">uninstall.sql</file>
+  </sql>
+ </uninstall>
+ 
+ <administration>
+  <!-- Administration Menu Section -->
+  <menu>TOOL</menu>
+ 
+  <!-- Administration Main File Copy Section -->
+  <files folder="admin">
+   <filename>tool.php</filename>
+   <filename>index.html</filename>
+   <filename>install.sql</filename>
+   <filename>uninstall.sql</filename>
+   <folder>tables</folder>
+  </files>
+
+ </administration>
+</install>
